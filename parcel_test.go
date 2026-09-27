@@ -71,7 +71,7 @@ func TestAddGetDelete(t *testing.T) {
 // TestSetAddress проверяет обновление адреса
 func TestSetAddress(t *testing.T) {
 	// prepare
-	db, err := sql.Open("sqlite", "./tracker.db")
+	db, err := sql.Open("sqlite", "tracker.db")
 
 	store := NewParcelStore(db)
 	parcel := getTestParcel()
@@ -106,7 +106,7 @@ func TestSetAddress(t *testing.T) {
 // TestSetStatus проверяет обновление статуса
 func TestSetStatus(t *testing.T) {
 	// prepare
-	db, err := sql.Open("sqlite", "./tracker.db")
+	db, err := sql.Open("sqlite", "tracker.db")
 
 	store := NewParcelStore(db)
 	parcel := getTestParcel()
@@ -138,7 +138,7 @@ func TestSetStatus(t *testing.T) {
 // TestGetByClient проверяет получение посылок по идентификатору клиента
 func TestGetByClient(t *testing.T) {
 	// prepare
-	db, err := sql.Open("sqlite", "./tracker.db")
+	db, err := sql.Open("sqlite", "tracker.db")
 
 	store := NewParcelStore(db)
 
